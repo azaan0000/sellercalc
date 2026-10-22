@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="theme-color" content="#4f46e5"/>
+<title>SellerCalc — Free Break-Even ROAS, Profit & Ad Calculators for E-commerce</title>
+<meta name="description" content="Free expert calculators for e-commerce sellers and media buyers: break-even ROAS, dropshipping profit margin, CPM/CPC/CTR, net payment terms due dates, EOQ and reorder point. No signup, instant, private."/>
+<link rel="canonical" href="https://azaan0000.github.io/sellercalc/"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%234f46e5'/%3E%3Cstop offset='1' stop-color='%23db2777'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='15' fill='url(%23g)'/%3E%3Ctext x='32' y='45' font-size='34' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="SellerCalc — Free Break-Even ROAS, Profit & Ad Calculators for E-commerce"/>
+<meta property="og:description" content="Free expert calculators for e-commerce sellers and media buyers: break-even ROAS, dropshipping profit margin, CPM/CPC/CTR, net payment terms due dates, EOQ and reorder point. No signup, instant, private."/>
+<meta property="og:url" content="https://azaan0000.github.io/sellercalc/"/>
+<meta name="twitter:card" content="summary"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "SellerCalc", "url": "https://azaan0000.github.io/sellercalc/", "description": "Free calculators for e-commerce sellers: break-even ROAS, dropshipping profit margin, CPM/CPC/CTR, net payment terms, EOQ and reorder point."}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "SellerCalc free calculators", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Break-Even ROAS Calculator", "url": "https://azaan0000.github.io/sellercalc/break-even-roas-calculator.html"}, {"@type": "ListItem", "position": 2, "name": "Dropshipping Profit Margin Calculator", "url": "https://azaan0000.github.io/sellercalc/dropshipping-profit-margin-calculator.html"}, {"@type": "ListItem", "position": 3, "name": "CPM ⇄ CPC ⇄ CTR Calculator", "url": "https://azaan0000.github.io/sellercalc/cpm-cpc-ctr-calculator.html"}, {"@type": "ListItem", "position": 4, "name": "Net Payment Terms Due Date Calculator", "url": "https://azaan0000.github.io/sellercalc/net-payment-terms-due-date-calculator.html"}, {"@type": "ListItem", "position": 5, "name": "EOQ & Reorder Point Calculator", "url": "https://azaan0000.github.io/sellercalc/eoq-reorder-point-calculator.html"}]}</script>
+<style>
+:root{
+  --bg:#f7f8fd;--surface:#ffffff;--surface2:#f0f2fb;--text:#111634;--muted:#5b6480;--border:#e5e8f6;
+  --p1:#4f46e5;--p2:#7c3aed;--p3:#db2777;
+  --grad:linear-gradient(120deg,var(--p1),var(--p2) 45%,var(--p3));
+  --shadow:0 8px 30px rgba(79,70,229,.12);--shadow-lg:0 24px 60px rgba(79,70,229,.18);
+}
+@media(prefers-color-scheme:dark){:root{
+  --bg:#0b0f20;--surface:#141a30;--surface2:#1b2240;--text:#eceffa;--muted:#98a2c4;--border:#242c52;
+  --shadow:0 8px 30px rgba(0,0,0,.35);--shadow-lg:0 24px 60px rgba(0,0,0,.5)}}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+a{color:var(--p1);text-decoration:none}
+/* ---------- nav ---------- */
+.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 80%,transparent);border-bottom:1px solid var(--border)}
+.navin{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;color:var(--text);letter-spacing:-.02em}
+.mark{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:10px;background:var(--grad);color:#fff;font-weight:800;font-size:17px;box-shadow:var(--shadow)}
+.links{display:flex;gap:22px;font-size:14.5px;font-weight:600}
+.links a{color:var(--muted);transition:color .2s}
+.links a:hover{color:var(--text)}
+@media(max-width:620px){.links{display:none}}
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--grad);color:#fff;font-weight:700;font-size:15px;padding:13px 26px;border-radius:13px;box-shadow:var(--shadow);transition:transform .22s,box-shadow .22s;cursor:pointer;border:0}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.btn-ghost{background:var(--surface);color:var(--text);border:1px solid var(--border);box-shadow:none}
+.btn-ghost:hover{border-color:var(--p1)}
+.btn-sm{padding:9px 18px;font-size:13.5px;border-radius:11px}
+/* ---------- hero ---------- */
+.hero{position:relative;padding:84px 0 56px;overflow:hidden}
+.glow{position:absolute;border-radius:50%;filter:blur(70px);opacity:.45;pointer-events:none}
+.glow.g1{width:420px;height:420px;background:#8b5cf6;top:-160px;left:-100px}
+.glow.g2{width:360px;height:360px;background:#4f46e5;top:-60px;right:-120px;opacity:.35}
+@media(prefers-color-scheme:dark){.glow{opacity:.28}}
+.badge{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--border);border-radius:999px;padding:7px 16px;font-size:13px;font-weight:600;color:var(--muted);box-shadow:var(--shadow)}
+.badge .dot{width:8px;height:8px;border-radius:50%;background:var(--grad);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.5);opacity:.6}}
+h1{font-size:clamp(32px,5.2vw,52px);font-weight:800;letter-spacing:-.03em;line-height:1.08;margin:22px 0 16px}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:clamp(15.5px,2.2vw,18.5px);color:var(--muted);max-width:660px}
+.cta-row{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.chip{display:inline-flex;align-items:center;gap:7px;background:var(--surface);border:1px solid var(--border);border-radius:999px;padding:6px 14px;font-size:12.5px;font-weight:600;color:var(--muted)}
+/* ---------- sections ---------- */
+section{padding:30px 0}
+.sec-title{font-size:clamp(24px,3.4vw,34px);font-weight:800;letter-spacing:-.02em;margin-bottom:8px}
+.sec-sub{color:var(--muted);max-width:600px;margin-bottom:26px}
+/* ---------- cards ---------- */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:18px}
+.card{position:relative;background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:26px 24px;box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s;display:block;color:var(--text)}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.card .tile{width:48px;height:48px;border-radius:14px;background:var(--grad);display:flex;align-items:center;justify-content:center;margin-bottom:16px;box-shadow:var(--shadow)}
+.card h3{font-size:17.5px;font-weight:800;letter-spacing:-.01em;margin-bottom:6px}
+.card p{font-size:14px;color:var(--muted);line-height:1.6}
+.card .go{display:inline-block;margin-top:14px;font-size:13.5px;font-weight:700;color:var(--p1)}
+.card:hover .go{text-decoration:underline}
+/* ---------- answer capsule ---------- */
+.crumbs{font-size:13px;color:var(--muted);font-weight:600}
+.crumbs a{color:var(--muted)}
+.crumbs a:hover{color:var(--p1)}
+.capsule{display:flex;gap:14px;background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:18px 20px;margin:26px 0;box-shadow:var(--shadow)}
+.capsule .tag{flex-shrink:0;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:var(--grad);border-radius:8px;padding:5px 10px;height:fit-content;margin-top:3px}
+.capsule p{font-size:15px;color:var(--text)}
+.capsule b{font-weight:700}
+/* ---------- calculator ---------- */
+.calc{background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:30px;box-shadow:var(--shadow-lg);margin-top:10px}
+.calc h3{font-size:19px;font-weight:800;margin-bottom:4px;letter-spacing:-.01em}
+.calc .hint{font-size:13.5px;color:var(--muted);margin-bottom:8px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:4px 18px}
+@media(max-width:640px){.grid2{grid-template-columns:1fr}}
+label{display:block;font-size:13px;font-weight:700;color:var(--muted);margin:14px 2px 7px}
+input,select{width:100%;background:var(--surface2);border:1.5px solid var(--border);color:var(--text);border-radius:12px;padding:12px 14px;font-size:15.5px;font-weight:600;font-family:inherit;transition:border-color .2s,box-shadow .2s}
+input:focus,select:focus{outline:none;border-color:var(--p1);box-shadow:0 0 0 4px color-mix(in srgb,var(--p1) 18%,transparent)}
+input[type=date]{color-scheme:light dark}
+.result{margin-top:22px;background:linear-gradient(135deg,color-mix(in srgb,var(--p1) 8%,var(--surface)),color-mix(in srgb,var(--p3) 8%,var(--surface)));border:1px solid color-mix(in srgb,var(--p1) 22%,var(--border));border-radius:16px;padding:6px 20px}
+.r-row{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:11px 0;border-bottom:1px dashed var(--border);font-size:14.5px;color:var(--muted)}
+.r-row:last-child{border-bottom:none}
+.r-row b{font-size:16px;color:var(--text);font-weight:800;text-align:right}
+.r-row b.good{color:#0c9d61}
+.r-row b.bad{color:#e11d48}
+@media(prefers-color-scheme:dark){.r-row b.good{color:#34d399}.r-row b.bad{color:#fb7185}}
+.r-note{padding:12px 0;font-size:14px;color:var(--muted)}
+/* ---------- content blocks ---------- */
+.formula{background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:16px 18px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13.5px;color:var(--text);overflow-x:auto;margin:14px 0 18px;white-space:nowrap}
+h2{font-size:clamp(22px,3vw,30px);font-weight:800;letter-spacing:-.02em;margin:38px 0 10px}
+h3{font-size:18px;font-weight:800;letter-spacing:-.01em;margin:26px 0 8px}
+.prose p{margin:0 0 16px;font-size:15.5px;color:var(--muted)}
+.prose p b{color:var(--text)}
+details{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;margin:10px 0;transition:border-color .2s}
+details[open]{border-color:color-mix(in srgb,var(--p1) 35%,var(--border))}
+summary{cursor:pointer;font-weight:700;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'+';font-size:20px;font-weight:600;color:var(--muted);flex-shrink:0;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg);color:var(--p1)}
+details p{margin-top:12px;font-size:14.5px;color:var(--muted)}
+/* ---------- features ---------- */
+.feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.feat{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:24px;box-shadow:var(--shadow)}
+.feat .tile{width:42px;height:42px;border-radius:12px;background:var(--grad);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.feat h3{margin:0 0 6px;font-size:16.5px}
+.feat p{font-size:14px;color:var(--muted)}
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--border);margin-top:56px;padding:40px 0 48px;background:var(--surface)}
+.fgrid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.fbrand{max-width:340px}
+.fbrand p{font-size:13.5px;color:var(--muted);margin-top:12px}
+.flinks{display:flex;gap:60px;flex-wrap:wrap}
+.fcol h4{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:12px}
+.fcol a{display:block;font-size:14px;color:var(--text);margin-bottom:8px;font-weight:600}
+.fcol a:hover{color:var(--p1)}
+.copy{margin-top:36px;font-size:13px;color:var(--muted)}
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}*{animation:none!important}}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap navin">
+  <a class="brand" href="./"><span class="mark">S</span>SellerCalc</a>
+  <nav class="links"><a href="./#tools">Calculators</a><a href="./#why">Why free</a></nav>
+  <a class="btn btn-sm" href="./#tools">Get started</a>
+</div></header>
+
+<div class="hero"><div class="glow g1"></div><div class="glow g2"></div><div class="wrap" style="position:relative">
+  <span class="badge"><span class="dot"></span>Free forever · No signup · 100% private</span>
+  <h1>Know your real numbers<br/><span class="grad-text">before you scale.</span></h1>
+  <p class="lead">Five expert-built calculators for online sellers and media buyers — break-even ROAS, true profit per order, ad costs, invoice due dates and inventory levels. Every formula shown, every answer instant.</p>
+  <div class="cta-row"><a class="btn" href="#tools">Browse calculators</a><a class="btn btn-ghost" href="#why">Why it's free</a></div>
+  <div class="chips">
+    <span class="chip">⚡ Instant as-you-type results</span>
+    <span class="chip">🔒 Runs in your browser — nothing uploaded</span>
+    <span class="chip">✓ Real formulas you can verify</span>
+  </div>
+</div></div>
+
+<section id="tools"><div class="wrap">
+  <h2 class="sec-title">The calculators</h2>
+  <p class="sec-sub">Built for Shopify, Amazon, Daraz, TikTok Shop and dropshipping sellers — the numbers that decide whether an ad campaign or a product is actually profitable.</p>
+  <div class="cards"><a class="card reveal" href="break-even-roas-calculator.html"><div class="tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 7v5h-5"/></svg></div><h3>Break-Even ROAS Calculator</h3><p>Find the minimum ROAS your store needs before ads lose money — and the target ROAS for your desired profit margin.</p><span class="go">Open calculator →</span></a><a class="card reveal" href="dropshipping-profit-margin-calculator.html"><div class="tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10"/><path d="M9.5 9.5h3.5a2 2 0 010 4h-3 3.5a2 2 0 010 4H9.5"/></svg></div><h3>Dropshipping Profit Margin Calculator</h3><p>Price vs supplier cost, fees and ad spend — your true profit per order and real net margin, instantly.</p><span class="go">Open calculator →</span></a><a class="card reveal" href="cpm-cpc-ctr-calculator.html"><div class="tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3.5v3"/><path d="M4 9h3"/><path d="M6.4 6.4l2 2"/><path d="M12 12l7.5 3.5-3 1.5-1.5 3z"/><path d="M12 12l-4-4"/></svg></div><h3>CPM ⇄ CPC ⇄ CTR Calculator</h3><p>Convert between CPM, CPC and CTR for Meta, TikTok, Google and Amazon ads — plus clicks and total spend.</p><span class="go">Open calculator →</span></a><a class="card reveal" href="net-payment-terms-due-date-calculator.html"><div class="tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18"/><path d="M8 3v4"/><path d="M16 3v4"/><path d="M9.5 15l1.8 1.8 3.6-3.6"/></svg></div><h3>Net Payment Terms Due Date Calculator</h3><p>Invoice date + Net 15/30/45/60/75/90 or EOM terms — the exact date your customer owes you.</p><span class="go">Open calculator →</span></a><a class="card reveal" href="eoq-reorder-point-calculator.html"><div class="tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l4.5-4L12 8l4.5-4L21 8"/><rect x="5" y="8" width="5" height="5"/><rect x="14" y="8" width="5" height="5"/><rect x="9.5" y="15" width="5" height="5"/></svg></div><h3>EOQ & Reorder Point Calculator</h3><p>Economic order quantity and reorder point from demand, order cost, holding cost and lead time.</p><span class="go">Open calculator →</span></a></div>
+</div></section>
+
+<section id="why"><div class="wrap">
+  <h2 class="sec-title">Why SellerCalc exists</h2>
+  <p class="sec-sub">Most stores don't fail on effort — they fail on arithmetic. These tools make the five make-or-break calculations impossible to get wrong.</p>
+  <div class="feats">
+    <div class="feat reveal"><div class="tile"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg></div><h3>Instant, no signup</h3><p>Everything computes live as you type. No accounts, no paywalls, no limits — the answer is always one keystroke away.</p></div>
+    <div class="feat reveal"><div class="tile"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg></div><h3>Private by design</h3><p>All the math runs locally in your browser. Your margins, costs and ad numbers never touch a server or get stored anywhere.</p></div>
+    <div class="feat reveal"><div class="tile"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><h3>Formulas you can trust</h3><p>Every calculator shows its exact formula and a worked example — so you can verify the math yourself, not just trust a black box.</p></div>
+  </div>
+</div></section>
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div class="fbrand"><a class="brand" href="./"><span class="mark">S</span>SellerCalc</a>
+      <p>Free, expert-built calculators for e-commerce sellers and media buyers. Instant results, zero signup, everything runs privately in your browser.</p></div>
+    <div class="flinks">
+      <div class="fcol"><h4>Calculators</h4>
+        <a href="break-even-roas-calculator.html">Break-Even ROAS</a>
+        <a href="dropshipping-profit-margin-calculator.html">Dropshipping Profit</a>
+        <a href="cpm-cpc-ctr-calculator.html">CPM ⇄ CPC ⇄ CTR</a>
+      </div>
+      <div class="fcol"><h4>More tools</h4>
+        <a href="net-payment-terms-due-date-calculator.html">Net Terms Due Date</a>
+        <a href="eoq-reorder-point-calculator.html">EOQ &amp; Reorder Point</a>
+        <a href="./#tools">All calculators</a>
+      </div>
+    </div>
+  </div>
+  <div class="copy">© 2026 SellerCalc · Free business tools for online sellers · <a href="llms.txt">llms.txt</a></div>
+</div></footer>
+<script>
+(function(){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.06});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)})})();
+</script>
+</body>
+</html>
